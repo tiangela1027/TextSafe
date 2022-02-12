@@ -5,6 +5,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light_purple"
     android:paddingLeft="@dimen/fragment_horizontal_margin"
     android:paddingTop="@dimen/fragment_vertical_margin"
     android:paddingRight="@dimen/fragment_horizontal_margin"
@@ -24,25 +25,6 @@
         app:layout_constraintVertical_bias="0.3"
         tools:layout_editor_absoluteX="16dp" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="394dp"
-        android:layout_height="550dp"
-        android:layout_marginBottom="164dp"
-        android:src="@drawable/registration"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="393dp"
-        android:layout_height="386dp"
-        android:layout_marginTop="404dp"
-        android:src="@drawable/box"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="-10dp" />
-
     <Button
         android:id="@+id/sendButton"
         android:layout_width="250dp"
@@ -60,17 +42,16 @@
         android:id="@+id/phoneNumber"
         android:layout_width="250dp"
         android:layout_height="50dp"
+        android:layout_marginBottom="164dp"
         android:background="@drawable/back"
         android:ems="10"
         android:gravity="center"
         android:inputType="phone"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.91"
         tools:text="@tools:sample/us_phones" />
 
     <ImageView
@@ -86,5 +67,17 @@
         app:layout_constraintStart_toStartOf="@+id/phoneNumber"
         app:layout_constraintTop_toTopOf="@+id/phoneNumber"
         app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/app_register"
+        app:layout_constraintBottom_toTopOf="@+id/phoneNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.633" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

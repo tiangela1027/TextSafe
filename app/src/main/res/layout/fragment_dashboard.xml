@@ -6,6 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".ui.dashboard.DashboardFragment">
 
+    <include
+        android:id="@+id/contact_list_view"
+        layout="@layout/contacts_list_view"/>
+
+
     <TextView
         android:id="@+id/text_dashboard"
         android:layout_width="match_parent"

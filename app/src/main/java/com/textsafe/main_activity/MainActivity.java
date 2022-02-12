@@ -1,6 +1,8 @@
 package com.textsafe.main_activity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -32,6 +34,17 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
+
+        navView.findViewById(R.id.navigation_notifications).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switchActivities();
+            }
+        });
     }
 
+    private void switchActivities() {
+        Intent switchActivityIntent = new Intent(this, MapsActivity.class);
+        startActivity(switchActivityIntent);
+    }
 }

@@ -7,8 +7,8 @@ import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.fragment.app.Fragment;
 
-import android.content.Context;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
@@ -23,15 +23,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.textsafe.main_activity.OnFragmentInteractionListener;
-import com.textsafe.main_activity.databinding.FragmentLoginRegisterBinding;
+import com.textsafe.main_activity.databinding.FragmentLoginLaunchBinding;
 
 import com.textsafe.main_activity.R;
 
-public class LoginRegisterFragment extends Fragment {
+public class LoginLaunchFragment extends Fragment {
 
     private LoginViewModel loginViewModel;
-    private FragmentLoginRegisterBinding binding;
+    private FragmentLoginLaunchBinding binding;
     private OnFragmentInteractionListener mListener;
+    private static int TIME_OUT = 4000;
 
     @Nullable
     @Override
@@ -39,9 +40,16 @@ public class LoginRegisterFragment extends Fragment {
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
 
-        binding = FragmentLoginRegisterBinding.inflate(inflater, container, false);
+        binding = FragmentLoginLaunchBinding.inflate(inflater, container, false);
         mListener = (OnFragmentInteractionListener) this.getActivity();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mListener.changeFragment(2);
+            }
+        }, TIME_OUT);
         return binding.getRoot();
+
     }
 
     @Override
@@ -52,7 +60,7 @@ public class LoginRegisterFragment extends Fragment {
 
 //        final EditText usernameEditText = binding.username;
 //        final EditText passwordEditText = binding.password;
-        final Button sendButton = binding.sendButton;
+//        final Button loginButton = binding.login;
         final ProgressBar loadingProgressBar = binding.loading;
 
         loginViewModel.getLoginFormState().observe(getViewLifecycleOwner(), new Observer<LoginFormState>() {
@@ -61,7 +69,7 @@ public class LoginRegisterFragment extends Fragment {
                 if (loginFormState == null) {
                     return;
                 }
-//                sendButton.setEnabled(loginFormState.isDataValid());
+//                loginButton.setEnabled(loginFormState.isDataValid());
 //                if (loginFormState.getUsernameError() != null) {
 //                    usernameEditText.setError(getString(loginFormState.getUsernameError()));
 //                }
@@ -118,15 +126,14 @@ public class LoginRegisterFragment extends Fragment {
 //            }
 //        });
 
-        sendButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+//        loginButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
 //                loadingProgressBar.setVisibility(View.VISIBLE);
 //                loginViewModel.login(usernameEditText.getText().toString(),
 //                        passwordEditText.getText().toString());
-                mListener.changeFragment(3);
-            }
-        });
+//            }
+//        });
     }
 
     private void updateUiWithUser(LoggedInUserView model) {
@@ -145,17 +152,6 @@ public class LoginRegisterFragment extends Fragment {
                     Toast.LENGTH_LONG).show();
         }
     }
-
-//    @Override
-//    public void onAttach(Context context) {
-//        super.onAttach(context);
-//        try {
-//            mListener = (OnFragmentInteractionListener) context;
-//        } catch (ClassCastException e) {
-//            throw new ClassCastException(context.toString()
-//                    + " must implement OnFragmentInteractionListener");
-//        }
-//    }
 
     @Override
     public void onDestroyView() {

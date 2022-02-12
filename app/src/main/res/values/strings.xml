@@ -15,4 +15,5 @@
     <string name="login_failed">"Login failed"</string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="title_activity_login_verification">LoginVerificationActivity</string>
+    <string name="title_activity_login_launch">LoginLaunchActivity</string>
 </resources>

@@ -155,12 +155,18 @@ public class LoginActivity extends AppCompatActivity
     @Override
     public void changeFragment(int id){
         if (id == 1) {
+            Fragment login_launch_fragment = new LoginLaunchFragment();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.fragment_container, login_launch_fragment);
+            ft.commit();
+        }
+        else if (id == 2) {
             Fragment login_register_fragment = new LoginRegisterFragment();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.fragment_container, login_register_fragment);
             ft.commit();
         }
-        else if (id == 2) {
+        else if (id == 3) {
             Fragment login_verify_fragment = new LoginVerificationFragment();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.fragment_container, login_verify_fragment);

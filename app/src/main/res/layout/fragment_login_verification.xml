@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
+    android:background="@color/light_purple"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingLeft="@dimen/fragment_horizontal_margin"
@@ -16,7 +17,10 @@
         android:layout_width="77dp"
         android:layout_height="83dp"
         android:ems="10"
+        android:background="@color/white"
+        android:textColor="@color/black"
         android:inputType="number"
+        android:gravity="center"
         android:imeOptions="actionNext"
         android:maxLength="1"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -31,6 +35,9 @@
         android:layout_width="77dp"
         android:layout_height="83dp"
         android:ems="10"
+        android:gravity="center"
+        android:background="@color/white"
+        android:textColor="@color/black"
         android:inputType="number"
         android:imeOptions="actionNext"
         android:maxLength="1"
@@ -46,6 +53,9 @@
         android:layout_width="77dp"
         android:layout_height="83dp"
         android:ems="10"
+        android:gravity="center"
+        android:background="@color/white"
+        android:textColor="@color/black"
         android:imeOptions="actionNext"
         android:inputType="number"
         android:maxLength="1"
@@ -61,6 +71,9 @@
         android:layout_width="77dp"
         android:layout_height="83dp"
         android:ems="10"
+        android:gravity="center"
+        android:background="@color/white"
+        android:textColor="@color/black"
         android:inputType="number"
         android:maxLength="1"
         android:imeOptions="actionNext"
@@ -70,15 +83,6 @@
         app:layout_constraintStart_toEndOf="@+id/et_digit3"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.74" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="470dp"
-        android:layout_height="448dp"
-        android:src="@drawable/verification"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/verify"
@@ -91,5 +95,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/app_verify"
+        app:layout_constraintBottom_toTopOf="@+id/verify"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.356" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -38,25 +38,25 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
 
-//        navView.findViewById(R.id.navigation_notifications).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                switchToMaps();
-//            }
-//        });
-
-        Button mapButton = findViewById(R.id.mapButton);
-        mapButton.setOnClickListener(new View.OnClickListener() {
+        navView.findViewById(R.id.navigation_notifications).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                switchToMaps();
+                switchToSettings();
             }
         });
+
+//        Button mapButton = findViewById(R.id.mapButton);
+//        mapButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                sw();
+//            }
+//        });
     }
 
 
-    public void switchToMaps() {
-        Intent switchActivityIntent = new Intent(this, MapsActivity.class);
+    public void switchToSettings() {
+        Intent switchActivityIntent = new Intent(this, SettingsActivity.class);
         startActivity(switchActivityIntent);
     }
 

@@ -7,58 +7,7 @@
     android:backgroundTint="#E5E5E5"
     android:textAlignment="textEnd">
 
-    <ScrollView
-        android:id="@+id/scrollView3"
-        android:layout_width="370dp"
-        android:layout_height="574dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497"
-        tools:ignore="MissingConstraints">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/button1"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:
-                android:background="?android:attr/selectableItemBackground"
-                android:drawableLeft="@drawable/manage2"
-                android:text="Manage Account"
-                android:textAllCaps="false"
-                android:textColor="@color/black" />
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:
-                android:background="?android:attr/selectableItemBackground"
-                android:drawableLeft="@drawable/permissions2"
-                android:text="Permissions"
-                android:textAllCaps="false"
-                android:textColor="@color/black" />
-
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:
-                android:background="?android:attr/selectableItemBackground"
-                android:drawableLeft="@drawable/more2"
-                android:text="More"
-                android:textAllCaps="false"
-                android:textColor="@color/black" />
-
-
-        </LinearLayout>
-    </ScrollView>
 
     <TextView
         android:id="@+id/textView"
@@ -70,10 +19,49 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintHorizontal_bias="0.176"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.048" />
+        app:layout_constraintVertical_bias="0.057" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="387dp"
+        android:layout_height="79dp"
+
+        android:background="?android:attr/selectableItemBackground"
+        android:drawableLeft="@drawable/manage2"
+        android:text="Manage Account"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="107dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="386dp"
+        android:layout_height="81dp"
+
+        android:background="?android:attr/selectableItemBackground"
+        android:drawableLeft="@drawable/more2"
+        android:text="More"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="266dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="386dp"
+        android:layout_height="76dp"
+
+        android:background="?android:attr/selectableItemBackground"
+        android:drawableLeft="@drawable/permissions2"
+        android:text="Permissions"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="190dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

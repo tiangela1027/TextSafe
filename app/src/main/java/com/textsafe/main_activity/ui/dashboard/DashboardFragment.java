@@ -62,7 +62,7 @@ public class DashboardFragment extends Fragment
      * the Android framework, so it is prefaced with "android.R.id"
      */
     private final static int[] TO_IDS = {
-            R.id.firstName
+            R.id.text1
     };
     // Define global mutable variables
     // Define a ListView object

@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void switchToMaps() {
+    public void switchToMaps() {
         Intent switchActivityIntent = new Intent(this, MapsActivity.class);
         startActivity(switchActivityIntent);
     }

@@ -11,22 +11,17 @@
 android:orientation="horizontal" android:layout_width="match_parent"
 android:layout_height="@dimen/contact_item_height">
 
-<ImageView
-    android:layout_width="@dimen/contact_item_image_width"
-    android:layout_height="@dimen/contact_item_image_height"
-    android:id="@+id/imageView"
-    android:layout_marginTop="2dp"
-    android:layout_marginLeft="10dp"/>
-<!--        android:src="@drawable/ic_action_user"-->
-<!--        android:background="@color/black_overlay"-->
-
-<TextView
-    android:layout_width="@dimen/contact_item_fn_width"
-    android:layout_height="@dimen/contact_item_fn_height"
-    android:text="New Text"
-    android:id="@+id/firstName"
-    android:textSize="20dp"
-    android:textColor="@color/black"
-    android:layout_marginLeft="100dp"/>
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_margin="15dp"
+        android:layout_height="120dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:drawableLeft="@drawable/user"
+        android:gravity="center"
+        android:fontFamily="sans-serif-light"
+        android:text="Name"
+        android:textColor="@color/black"
+        android:textSize="10pt" />
 
 </RelativeLayout>

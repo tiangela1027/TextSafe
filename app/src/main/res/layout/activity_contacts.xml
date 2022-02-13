@@ -1,38 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ContactsActivity">
+    android:layout_height="match_parent">
+    android:background = "E5E5E5"
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/Theme.TextSafe.AppBarOverlay">
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="401dp"
+        android:layout_height="665dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.984">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/Theme.TextSafe.PopupOverlay" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    </com.google.android.material.appbar.AppBarLayout>
+            <TextView
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawableLeft="@drawable/profilepic"
+                android:text="Name"
+                android:gravity="center"
+                android:textColor="@color/black" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
-        android:name="com.textsafe.main_activity.FirstFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawableLeft="@drawable/profilepic"
+                android:text="Name"
+                android:textColor="@color/black" />
 
-    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:id="@+id/fab"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="bottom|end"-->
-<!--        android:layout_marginEnd="@dimen/fab_margin"-->
-<!--        android:layout_marginBottom="16dp"-->
-<!--        app:srcCompat="@android:drawable/ic_dialog_email" />-->
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawableLeft="@drawable/profilepic"
+                android:text="Name"
+                android:textColor="@color/black" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawableLeft="@drawable/profilepic"
+                android:text="Name"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawableLeft="@drawable/profilepic"
+                android:text="Name"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawableLeft="@drawable/profilepic"
+                android:text="Name"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawableLeft="@drawable/profilepic"
+                android:text="Name"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawableLeft="@drawable/profilepic"
+                android:text="Name"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawableLeft="@drawable/profilepic"
+                android:text="Name"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawableLeft="@drawable/profilepic"
+                android:text="Name"
+                android:textColor="@color/black" />
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="409dp"
+        android:layout_height="63dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="1dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

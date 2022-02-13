@@ -3,6 +3,7 @@ package com.textsafe.main_activity.ui.dashboard;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.ContentResolver;
+import android.content.ContentUris;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
@@ -36,6 +37,8 @@ import androidx.loader.content.Loader;
 import com.textsafe.main_activity.R;
 import com.textsafe.main_activity.databinding.FragmentDashboardBinding;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 public class DashboardFragment extends Fragment
@@ -147,7 +150,6 @@ public class DashboardFragment extends Fragment
         contactsList.setAdapter(cursorAdapter);
         contactsList.setOnItemClickListener(this);
 
-
 //        binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
@@ -224,6 +226,28 @@ public class DashboardFragment extends Fragment
         contactsList.setOnItemClickListener(this);
 
 
+    }
+
+    public InputStream openPhoto(long contactId) {
+        Uri contactUri = ContentUris.withAppendedId(ContactsContract.Contacts.CONTENT_URI, contactId);
+        Uri photoUri = Uri.withAppendedPath(contactUri, ContactsContract.Contacts.Photo.CONTENT_DIRECTORY);
+        Context ctx = getContext();
+        Cursor cursor = ctx.getContentResolver().query(photoUri,
+                new String[] {ContactsContract.Contacts.Photo.PHOTO}, null, null, null);
+        if (cursor == null) {
+            return null;
+        }
+        try {
+            if (cursor.moveToFirst()) {
+                byte[] data = cursor.getBlob(0);
+                if (data != null) {
+                    return new ByteArrayInputStream(data);
+                }
+            }
+        } finally {
+            cursor.close();
+        }
+        return null;
     }
 
     // Register the permissions callback, which handles the user's response to the
@@ -320,5 +344,7 @@ public class DashboardFragment extends Fragment
          * You can use contactUri as the content URI for retrieving
          * the details for a contact.
          */
+
+
     }
 }

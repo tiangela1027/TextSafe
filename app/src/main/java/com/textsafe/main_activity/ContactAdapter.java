@@ -37,10 +37,10 @@ public class ContactAdapter extends ArrayAdapter<Contact> {
             linearLayout = (LinearLayout)convertView;
         }
         TextView firstName = (TextView)linearLayout.findViewById(R.id.firstName);
-        TextView lastName =(TextView)linearLayout.findViewById(R.id.lastName);
+//        TextView lastName =(TextView)linearLayout.findViewById(R.id.lastName);
 
         firstName.setText(contact.getFirstName());
-        lastName.setText(contact.getLastName());
+//        lastName.setText(contact.getLastName());
 
         return linearLayout;
     }

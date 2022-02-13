@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.dashboard.DashboardFragment">
+    tools:context=".FirstFragment">
 
     <include
         android:id="@+id/contact_list_view"
-        layout="@layout/contacts_list_view" />
+        layout="@layout/contacts_list_view"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

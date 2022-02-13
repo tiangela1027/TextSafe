@@ -6,6 +6,8 @@ import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -38,13 +40,26 @@ public class MainActivity extends AppCompatActivity {
         navView.findViewById(R.id.navigation_notifications).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                switchActivities();
+                switchToMaps();
             }
         });
+
+//        navView.findViewById(R.id.navigation_dashboard).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                switchToContacts();
+//            }
+//        });
     }
 
-    private void switchActivities() {
+
+    private void switchToMaps() {
         Intent switchActivityIntent = new Intent(this, MapsActivity.class);
+        startActivity(switchActivityIntent);
+    }
+
+    private void switchToContacts() {
+        Intent switchActivityIntent = new Intent(this, ContactsActivity.class);
         startActivity(switchActivityIntent);
     }
 }

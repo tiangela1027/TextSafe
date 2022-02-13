@@ -26,6 +26,7 @@ android:layout_height="@dimen/contact_item_height">
     android:text="New Text"
     android:id="@+id/firstName"
     android:textSize="20dp"
+    android:textColor="@color/black"
     android:layout_marginLeft="100dp"/>
 
 </RelativeLayout>

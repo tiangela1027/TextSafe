@@ -3,6 +3,7 @@ package com.textsafe.main_activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -37,19 +38,20 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
 
-        navView.findViewById(R.id.navigation_notifications).setOnClickListener(new View.OnClickListener() {
+//        navView.findViewById(R.id.navigation_notifications).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                switchToMaps();
+//            }
+//        });
+
+        Button mapButton = findViewById(R.id.mapButton);
+        mapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 switchToMaps();
             }
         });
-
-//        navView.findViewById(R.id.navigation_dashboard).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                switchToContacts();
-//            }
-//        });
     }
 
 
@@ -58,8 +60,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(switchActivityIntent);
     }
 
-    private void switchToContacts() {
-        Intent switchActivityIntent = new Intent(this, ContactsActivity.class);
-        startActivity(switchActivityIntent);
-    }
+//    private void switchToContacts() {
+//        Intent switchActivityIntent = new Intent(this, ContactsActivity.class);
+//        startActivity(switchActivityIntent);
+//    }
 }

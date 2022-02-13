@@ -121,7 +121,7 @@ public class DashboardFragment extends Fragment
 
         binding = FragmentDashboardBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-//        getContactsPermission();
+        getContactsPermission();
 
 //        final TextView textView = binding.textDashboard;
 //        dashboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
